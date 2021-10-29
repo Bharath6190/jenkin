@@ -3,16 +3,16 @@
 ## A Python3 program to Download an existing file from AWS S3
 ##       
 ## ******  IMPORTANT : Set below before executing ******
-##  export AWS_ACCESS_KEY_ID=<Your_Aws_KeyId>
-##  export AWS_SECRET_ACCESS_KEY=<Your_Aws_Secret_Access_Key>
+##  export AWS_ACCESS_KEY_ID=AKIASICPKLFQGZY23CCM
+##  export AWS_SECRET_ACCESS_KEY=E+USt0IHMZ8HDeXDXHuy88NURs/ApgO8oW/l3yOW
 ##
 import boto3
 import os
 
 """ Input:
-export S3_DOWNLOAD_FILENAME='01_shell.zip'
-export S3_DOWNLOAD_LOCALNAME='/tmp/01_shell_local.zip'
-export S3_BUCKET_NAME='<your_s3_bucket_name>'
+export S3_DOWNLOAD_FILENAME='03_s3_bucket_download_file.py'
+export S3_DOWNLOAD_LOCALNAME='/home/ubuntu/Downloads'
+export S3_BUCKET_NAME='git619'
 """
 
 def download_from_aws_s3(bucket, remote_file, local_file):
@@ -22,9 +22,9 @@ def download_from_aws_s3(bucket, remote_file, local_file):
     )
     s3_client.download_file(bucket, remote_file, local_file)
 
-s3_file_name      = os.environ.get('S3_DOWNLOAD_FILENAME')
-s3_local_filepath = os.environ.get('S3_DOWNLOAD_LOCALNAME')
-s3_bucket_name    = os.environ.get('S3_BUCKET_NAME')
+s3_file_name      = os.environ.get('03_s3_bucket_download_file.py')
+s3_local_filepath = os.environ.get('/home/ubuntu/Downloads')
+s3_bucket_name    = os.environ.get('git619')
 
-download_from_aws_s3( s3_bucket_name, s3_file_name, s3_local_filepath)
+download_from_aws_s3( git619, 03_s3_bucket_download_file.py,home/ubuntu/Downloads )
 
